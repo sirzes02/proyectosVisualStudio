@@ -1,0 +1,15 @@
+﻿@model Quiz2ProgramaciónWEBen.NET2019_II.Models.AtletaModelo
+
+@{
+    Html.RenderPartial("Datos");
+}
+
+<legend>@Html.DisplayNameFor(Model => Model.nombre)</legend>
+<div>
+    @Html.DisplayFor(Model => Model.nombre)
+</div>
+
+
+@{
+    Html.RenderPartial("Pie");
+}

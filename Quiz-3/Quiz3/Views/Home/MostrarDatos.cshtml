@@ -1,0 +1,30 @@
+﻿@model Ejercicio_2009_II_clase_6.Models.DatosPersonales
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MostrarDatos</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>@Html.DisplayNameFor(Model => Model.nombre)</th>
+                <th>@Html.DisplayNameFor(Model => Model.apellido)</th>
+                <th>@Html.DisplayNameFor(Model => Model.Edad)</th>
+            </tr>
+            <tr>
+                <td>@Html.DisplayFor(Model => Model.nombre)</td>
+                <td>@Html.DisplayFor(Model => Model.apellido)</td>
+                <td>@Html.DisplayFor(Model => Model.Edad)</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

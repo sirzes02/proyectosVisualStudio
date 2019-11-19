@@ -1,0 +1,41 @@
+﻿@model Ejercicio_2009_II_clase_6.Models.DatosPersonales
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DatosPersonales</title>
+</head>
+<body>
+    <div>
+        <h3>Ingrese los datos</h3>
+        @using (Html.BeginForm("MostrarDatos", "Home", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div>
+        <div>
+            @Html.LabelFor(p => p.nombre, new { @class = "control-danger" })
+            @Html.TextBoxFor(p => p.nombre, new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.nombre, "", new { @class = "text-danger" })
+        </div>
+        <div>
+            @Html.LabelFor(p => p.apellido, new { @class = "control-danger" })
+            @Html.TextBoxFor(p => p.apellido, new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.apellido, "", new { @class = "text-danger" })
+        </div>
+        <div>
+            @Html.LabelFor(p => p.Edad, new { @class = "control-danger" })
+            @Html.TextBoxFor(p => p.Edad, new { @class = "form-control" })
+            @Html.ValidationMessageFor(p => p.Edad, "", new { @class = "text-danger" })
+        </div>
+    </div>
+            <input type="submit" value="Enviar" />
+        }
+    </div>
+</body>
+</html>

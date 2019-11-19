@@ -1,0 +1,38 @@
+﻿@model Quiz2ProgramaciónWEBen.NET2019_II.Models.AtletaModelo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <fieldset>
+            <legend>Ingrese los datos</legend>
+            @using (Html.BeginForm("MostrarNombre", "Index", FormMethod.Post))
+            {
+                <div>
+                    @Html.LabelFor(m => m.nombre, new { @class = "control-danger" })
+                    <br />
+                    <input type="text" name="nombre" value=" " />
+                    @Html.ValidationMessageFor(m => m.nombre, "", new { @class = "text-danger" })
+                </div>
+                <div>
+                    @Html.LabelFor(m => m.numeroEspalda, new { @class = "control-danger" })
+                    <br />
+                    @Html.TextBoxFor(m => m.numeroEspalda, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.numeroEspalda, "", new { @class = "text-danger" })
+                </div>
+                <br />
+                <input type="submit" value="Enviar" />
+            }
+        </fieldset>
+    </div>
+</body>
+</html>
